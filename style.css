@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: pink;
+}
+
+.container{
+    width: 750px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    position: relative;
+    display: inline-block;
+    -webkit-text-stroke: 1px rgb(218, 186, 191);
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(230, 168, 190);
+    font-size: 3vw;
+}
+
+h3::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    font-size: inherit;
+    color: rgb(240, 10, 87);
+    border: 0px solid rgb(132, 5, 48);
+    -webkit-text-stroke: red;
+    overflow: hidden;
+    animation: revealText 6s ease-in-out infinite;
+}
+
+@keyframes revealText{
+    0%{
+        width: 0;
+    }50%{
+        width: 100%;
+    }100%{
+        width: 0;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  p {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+  
+  
+
+
+
+
